@@ -22,7 +22,10 @@
 ai-short-drama/
 ├─ docs/
 │  ├─ 00-方法/                  方法论：15 秒单元、提示词公式、负面词、崩坏速查
-│  └─ EP01-初遇/                第 1 集：分镜脚本（V1 / V2 两版 Word）
+│  ├─ EP01-初遇/                第 1 集：分镜脚本（V1 / V2）、人物设定、分集卡
+│  └─ 番外/                     番外单元：糖葫芦 15 秒单元提示词
+├─ skills/                      可安装技能库
+│  └─ novel-to-screenplay/      小说转剧本：拆解 / 五类描写 / 提示词 / 运镜 / 负面词 / 质检
 ├─ prompts/
 │  ├─ EP01-prompts.md           人读版提示词库（按单元分组）
 │  └─ EP01-prompts.txt          粘贴版（每镜一段，可直接丢进生成工具）
@@ -34,6 +37,23 @@ ai-short-drama/
 ├─ CHANGELOG.md
 └─ LICENSE
 ```
+
+## 技能（Skills）
+
+`skills/` 放可安装的技能包，装到 `~/.dsh/skills/` 后即可在对话里直接触发。
+
+**[novel-to-screenplay](skills/novel-to-screenplay/SKILL.md)** — 小说转剧本的完整流水线：
+
+| 环节 | 文件 | 内容 |
+| --- | --- | --- |
+| 拆解 | [01-小说拆解](skills/novel-to-screenplay/references/01-小说拆解.md) | 三层拆解、场景切分、15 秒映射、钩子卡点 |
+| 描写 | [02-五类描写可拍化](skills/novel-to-screenplay/references/02-五类描写可拍化.md) | 人物 / 动作 / 环境 / 生态 / 语言 → 镜头 |
+| 提示词 | [03-分镜提示词](skills/novel-to-screenplay/references/03-分镜提示词.md) | 四行公式、景别焦段、光色词表、参数 |
+| 运镜 | [04-大师运镜](skills/novel-to-screenplay/references/04-大师运镜.md) | 20 张技法卡（流派 → 用途 → 提示词写法） |
+| 负面词 | [05-负面提示词库](skills/novel-to-screenplay/references/05-负面提示词库.md) | 三包拼接、平台差异、组合模板 |
+| 质检 | [06-质检清单](skills/novel-to-screenplay/references/06-质检清单.md) | 12 条自检、五维评分、崩坏对照 |
+
+安装：`Copy-Item -Recurse -Force .\skills\novel-to-screenplay "$env:USERPROFILE\.dsh\skills\novel-to-screenplay"`
 
 ## 当前产出
 

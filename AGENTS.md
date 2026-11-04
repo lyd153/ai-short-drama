@@ -10,6 +10,7 @@
 | 剧集说明 / 分集卡 | `docs/EP0X-剧集名/README.md` | 固定文件名 |
 | 人物 / 世界设定 | `docs/EP0X-剧集名/人物设定.md` | 固定文件名，暂定稿在标题标版本（v0.1） |
 | 方法论、规范、复盘 | `docs/00-方法/` | 中文标题 `.md` |
+| 可安装技能 | `skills/<kebab-case>/` | 内含 `SKILL.md` + `references/` + `templates/`，索引写进 `skills/README.md` |
 | 提示词（人读） | `prompts/EP0X-prompts.md` | 由脚本导出，不手改 |
 | 提示词（粘贴） | `prompts/EP0X-prompts.txt` | 由脚本导出，不手改 |
 | 结构化数据 | `data/EP0X.json` | 由脚本导出，不手改 |

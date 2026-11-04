@@ -4,6 +4,15 @@
 
 ## 2026-11-04
 
+### 技能库 · novel-to-screenplay（小说转剧本）
+
+- 新增 `skills/novel-to-screenplay/`：主技能 `SKILL.md`（九步流程、输入输出契约、失败处理）+ 6 篇手册 + 2 个模板。
+- 覆盖链路：小说拆解 → 五类描写（人物/动作/环境/生态/语言）可拍化 → 15 秒单元 → 分镜表 → 四行提示词 → 大师运镜 → 负面词库 → 质检。
+- 运镜手册 20 张技法卡（固定长镜、抽帧、dolly zoom、单点透视、升格、甩镜、环绕等），每张附提示词写法与风险。
+- 负面词库按「基础包 / 人物包 / 场景包 / 画风包」分类，给四种组合模板与平台差异。
+- 新增 `skills/README.md` 技能索引与安装方式（复制到 `~/.dsh/skills/`）。
+- 素材来源：GitHub 开源项目（chinese-webnovel-skills、script-to-storyboard、xuanhuan-combat-director、tapcanvas、Toonflow、xiaoyou-aigc-cinematic-director）与 B 站/抖音/快手教程的公开思路，原创蒸馏、不复制原文。
+
 ### 番外 · 糖葫芦（15 秒单元提示词）
 
 - 新增 `docs/番外/糖葫芦-15秒单元提示词.md`：EXTRA-01 完整 15 秒单元（4+4+5+2 分段），含单元卡、可直接投喂的整段提示词、合并版负面词、参数与执行、10s/5s 切片变体。
