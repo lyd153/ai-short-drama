@@ -1,0 +1,14 @@
+# 统一换行符，避免 Windows / macOS 混合提交产生整文件 diff
+* text=auto
+
+# 文档与图片：二进制，不做换行转换
+*.docx binary
+*.doc binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.mp4 binary
+*.mov binary
+*.zip binary

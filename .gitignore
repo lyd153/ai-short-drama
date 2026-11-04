@@ -1,0 +1,31 @@
+# ---- 系统与编辑器 ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# ---- Office 临时文件 ----
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# ---- 渲染与临时产物 ----
+.dsh-office-*/
+.dsh-v2-*/
+render/
+render*/
+*.log
+
+# ---- 生成素材（体积大，不入库） ----
+assets/renders/
+assets/clips/
