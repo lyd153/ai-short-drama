@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | [novel-to-screenplay](novel-to-screenplay/SKILL.md) | 小说 → 剧本 → 15 秒单元 → 分镜 → 逐镜提示词 → 负面词 → 质检 | 要做改编、拆场景、写分镜、生成提示词、选运镜、补负面词 |
 | [prompt-precision](prompt-precision/SKILL.md) | 把模糊提示词改写成精准、可验证、可复现的提示词 | 出图/出片总「不像」「跑偏」、要控构图光线、要做 A/B 迭代、要建模板 |
+| [aigc-drama-production](aigc-drama-production/SKILL.md) | AI 短剧制作流程 SOP 与防错手册：五类失败码、八阶段门禁、资产编号、废片止损 | 要搭生产线、排查成片崩坏、控一致性、降返工 |
 
 ## 安装到 DSH
 
