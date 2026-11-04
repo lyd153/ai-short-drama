@@ -7,6 +7,7 @@
 | 技能 | 用途 | 触发场景 |
 | --- | --- | --- |
 | [novel-to-screenplay](novel-to-screenplay/SKILL.md) | 小说 → 剧本 → 15 秒单元 → 分镜 → 逐镜提示词 → 负面词 → 质检 | 要做改编、拆场景、写分镜、生成提示词、选运镜、补负面词 |
+| [prompt-precision](prompt-precision/SKILL.md) | 把模糊提示词改写成精准、可验证、可复现的提示词 | 出图/出片总「不像」「跑偏」、要控构图光线、要做 A/B 迭代、要建模板 |
 
 ## 安装到 DSH
 
