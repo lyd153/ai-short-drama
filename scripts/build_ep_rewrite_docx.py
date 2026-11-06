@@ -16,7 +16,7 @@ from docx.oxml import OxmlElement
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_DIR = os.path.join(ROOT, "docs", "EP-改版")
-OUT = os.path.join(SRC_DIR, "EP-改版-12集-分镜与提示词.docx")
+OUT = os.path.join(SRC_DIR, "EP-改版-12集-分镜与提示词_高甜对话版.docx")
 
 C_INK, C_GOLD, C_LINE, C_SOFT, C_WHITE = "1C3B4A", "B08A3E", "C3CFD6", "F4F7F8", "FFFFFF"
 C_PROMPT = "F2F6F7"
