@@ -15,8 +15,11 @@ from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC_DIR = os.path.join(ROOT, "docs", "EP-改版")
-OUT = os.path.join(SRC_DIR, "EP-改版-12集-分镜与提示词_高甜对话版.docx")
+SRC_DIR = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "docs", "EP-改版")
+if not os.path.isabs(SRC_DIR):
+    SRC_DIR = os.path.join(ROOT, SRC_DIR)
+OUT_NAME = sys.argv[2] if len(sys.argv) > 2 else "EP-改版-12集-分镜与提示词_高甜对话版.docx"
+OUT = os.path.join(SRC_DIR, OUT_NAME)
 
 C_INK, C_GOLD, C_LINE, C_SOFT, C_WHITE = "1C3B4A", "B08A3E", "C3CFD6", "F4F7F8", "FFFFFF"
 C_PROMPT = "F2F6F7"
@@ -284,7 +287,7 @@ def main():
 
     hp = sec.header.paragraphs[0]
     hp.alignment = 2
-    set_run(hp.add_run("《初遇》改版 · 言情向 12 集 ｜ 分镜与提示词"), name="微软雅黑", size=8, color="8C9AA3")
+    set_run(hp.add_run("《初遇》挽回线 ｜ 分镜与提示词"), name="微软雅黑", size=8, color="8C9AA3")
 
     fp = sec.footer.paragraphs[0]
     fp.alignment = 1
@@ -301,15 +304,17 @@ def main():
     # 封面
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(26)
-    set_run(p.add_run("REWRITE · ROMANCE CUT · 12 EPISODES"), name="微软雅黑", size=8.5, bold=True, color=C_GOLD)
+    set_run(p.add_run("REWRITE · DEBT & MAKE-UP · ROMANCE CUT"), name="微软雅黑", size=8.5, bold=True, color=C_GOLD)
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(6)
-    set_run(p.add_run("初遇 · 改版"), name="微软雅黑", size=32, bold=True, color=C_INK)
+    set_run(p.add_run("初遇 · 挽回线"), name="微软雅黑", size=32, bold=True, color=C_INK)
     p = doc.add_paragraph()
-    set_run(p.add_run("12 集 ｜ EP01 = 120 秒，EP02–EP12 = 60 秒 ｜ 15 秒一段 ｜ 208 镜"), name="微软雅黑", size=12, color="4A6675")
+    set_run(p.add_run("EP01 = 120 秒 ｜ EP02–EP12 = 60 秒 ｜ 15 秒一段 ｜ 独白式开场 + 亏欠与挽回 + 绿茶男二"),
+            name="微软雅黑", size=12, color="4A6675")
     p = doc.add_paragraph()
     set_run(p.add_run("每段：单元卡（功能/情绪/钩子/声音/转场）→ 分镜表（景别焦段·运镜·画面与表演·台词语气）→ 逐镜四行提示词。"
-                      "画面与表演一列含人物动作与说话微表情；台词一列含甜言蜜语与语气标注。"), name="宋体", size=10.5, color="5C7A88")
+                      "画面与表演一列含人物动作与说话微表情；台词一列含甜言蜜语与语气标注；画外独白单独标注。"),
+            name="宋体", size=10.5, color="5C7A88")
 
     n_ep = n_shot = 0
     for idx, fn in enumerate(files):
